@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;600&display=swap');
+
+body {
+    background-color:#000;
+    font-family: "Mali", sans-serif;
+    color:#ffff00;
+    text-align: center;
+}
+
+input {
+    background-color: #404040;
+}
+
+#play, #feedback-button {
+    background-color:#ffff00;
+    font-family: "Mali", sans-serif;
+    font-weight: 600;
+}
+
+.game-area {
+    color: #000;
+    background-color: #ffffff;
+    margin: 2em auto;
+    width:50%;
+    height: 300px;
+    text-align: left;
+}
+
+.question-area {
+    padding: 2em;
+}
+
+#submit-answer {
+    margin: 3em 0;
+    font-family: "Mali", sans-serif;
+    font-weight: 600;
+    background-color: #404040;
+    color: #ffff00;
+}
+
+.feedback-section textarea {
+    background-color: #404040;
+    display: flex;
+    margin: auto;
+}
+
+#feedback-button {
+    margin: 1em 0;
+}
