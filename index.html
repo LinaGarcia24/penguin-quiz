@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome font-->
+    <script src="https://kit.fontawesome.com/ba07638530.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Penguin Quiz</title>
+</head>
+<body>
+    <h1 class="heading"><i class="fas fa-feather-alt"></i>How Much Do You Know About Penguins?<i class="fas fa-feather-alt"></i></h1>
+    <h2>Test your knowledge about some of the world's cutest animals!</h2>
+
+    <section class="form-section">
+        <form action="https://formdump.codeinstitute.net/" method="post">
+            <label for="first-name">First Name: </label>
+            <input type="text" name="first-name" id="first-name" required>
+            <label for="last-name">Last Name: </label>
+            <input type="text" name="last-name" id="last-name" required>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="username" required>
+            <input type="submit" value="Let's Play!">
+        </form>
+    </section>
+
+    <div class="game-area">
+        <div class="question-area">
+            <p id="question">Question</p>
+            <div>
+                <input class= "answer" id= "answer1" name="answer" type="radio">
+                <label for="answer1">Answer1</label>
+            </div>
+            <div>
+                <input class= "answer" id= "answer2" name="answer" type="radio">
+                <label for="answer2">Answer2</label>
+            </div>
+            <div>
+                <input class= "answer" id= "answer3" name="answer" type="radio">
+                <label for="answer3">Answer3</label>
+            </div>
+            <div>
+                <input class= "answer" id= "answer4" name="answer" type="radio">
+                <label for="answer4">Answer4</label>
+            </div>
+            <button data-type="submit">Submit Answer</button>
+        </div>
+    </div>
+    <div class="score-area">
+        <p>Correct Answers: <span id="score">0</span></p>
+    </div>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
