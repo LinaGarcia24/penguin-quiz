@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // variables for questions loop
 let newQuestion = document.getElementById('question');
+let answerOne = document.getElementById('answer1');
+let answerOneLabel = document.getElementsByTagName('label')[4];
+let answerTwo = document.getElementById('answer2');
+let answerTwoLabel = document.getElementsByTagName('label')[5];
+let answerThree = document.getElementById('answer3');
+let answerThreeLabel = document.getElementsByTagName('label')[6];
+let answerFour = document.getElementById('answer4');
+let answerFourLabel = document.getElementsByTagName('label')[7];
 let questions = [
     { question: "What is the scientific name for penguins?",
     answers: {
@@ -123,8 +131,17 @@ let questions = [
 function displayQuestion() {
     console.log('form submitted');
     for (let i = 0; i < questions.length; i++){
-        console.log(questions[i]);
         newQuestion.innerText = questions[i].question;
+        answerOne.value = questions[i].answers.a;
+        answerOneLabel.innerText = answerOne.value;
+        answerTwo.value = questions[i].answers.b;
+        answerTwoLabel.innerText = answerTwo.value;
+        answerThree.value = questions[i].answers.c;
+        answerThreeLabel.innerText = answerThree.value;
+        answerFour.value = questions[i].answers.d;
+        answerFourLabel.innerText = answerFour.value;
     }
     }
+
+    function submitAnswer() {}
 
