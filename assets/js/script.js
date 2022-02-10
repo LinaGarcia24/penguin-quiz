@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Quiz begins after form is completed
     let playButton = document.getElementById('play-btn');
-    playButton.addEventListener('click', displayQuestion);
+    playButton.addEventListener('click', questionLoop);
 });
 
 // variables for questions loop
@@ -132,28 +132,34 @@ let selectedAnswer;
 let radioButtons = document.querySelectorAll('input[name="answer"]');
 let submitButton = document.getElementById('submit-btn');
 
-
 /**
- * Displays quiz questions and answers
+ * Loops through array of questions and answers
  */
-function displayQuestion() {
+
+function questionLoop(){
     console.log('form submitted');
     for (let i = 0; i < questions.length; i++){
         console.log(questions[i]);
         currentQuestionNumber = i;
-        console.log(currentQuestionNumber);
-        newQuestion.innerText = questions[currentQuestionNumber].question;
-        answerOne.value = questions[currentQuestionNumber].answers.a;
-        answerOneLabel.innerText = answerOne.value;
-        answerTwo.value = questions[currentQuestionNumber].answers.b;
-        answerTwoLabel.innerText = answerTwo.value;
-        answerThree.value = questions[currentQuestionNumber].answers.c;
-        answerThreeLabel.innerText = answerThree.value;
-        answerFour.value = questions[currentQuestionNumber].answers.d;
-        answerFourLabel.innerText = answerFour.value;
-        submitButton.addEventListener('click', storeAnswer);
+        displayQuestion();
+    }
+}
+/**
+ * Displays quiz questions and answers
+ */
+function displayQuestion() {
+    newQuestion.innerText = questions[currentQuestionNumber].question;
+    answerOne.value = questions[currentQuestionNumber].answers.a;
+    answerOneLabel.innerText = answerOne.value;
+    answerTwo.value = questions[currentQuestionNumber].answers.b;
+    answerTwoLabel.innerText = answerTwo.value;
+    answerThree.value = questions[currentQuestionNumber].answers.c;
+    answerThreeLabel.innerText = answerThree.value;
+    answerFour.value = questions[currentQuestionNumber].answers.d;
+    answerFourLabel.innerText = answerFour.value;
+    submitButton.addEventListener('click', storeAnswer);
     } 
-}     
+     
 
 /**
  * Stores answer from radio button
@@ -163,7 +169,6 @@ function storeAnswer() {
     for (let radioButton of radioButtons) {
         if (radioButton.checked) {
             selectedAnswer = radioButton.value;
-            console.log(selectedAnswer);
             checkAnswer();
         }
     }
@@ -178,10 +183,18 @@ function checkAnswer() {
     console.log('answer has been submitted')
     if (selectedAnswer === questions[currentQuestionNumber].correctAnswer){
         alert('Good job! You got it right!')
+        increaseScore();
 
     } else {
         alert(`You answered ${selectedAnswer}. The correct answer was ${questions[currentQuestionNumber].correctAnswer}`)
     }
+}
 
+/**
+ * Increases score
+ */
+
+function increaseScore() {
+    document.getElementById('score').innerHTML =+ 1;
 }
 
