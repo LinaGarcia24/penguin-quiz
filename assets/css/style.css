@@ -30,7 +30,7 @@ input {
     padding: 2em;
 }
 
-#submit-btn {
+#submit-btn, #nxt-btn {
     margin: 3em 0;
     font-family: "Mali", sans-serif;
     font-weight: 600;

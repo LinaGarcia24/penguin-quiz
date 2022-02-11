@@ -16,6 +16,7 @@ let answerThree = document.getElementById('answer3');
 let answerThreeLabel = document.getElementsByTagName('label')[6];
 let answerFour = document.getElementById('answer4');
 let answerFourLabel = document.getElementsByTagName('label')[7];
+let nextButton = document.getElementById('nxt-btn');
 let questions = [
     { question: "What is the scientific name for penguins?",
     answers: {
@@ -131,19 +132,29 @@ let questions = [
 let selectedAnswer;
 let radioButtons = document.querySelectorAll('input[name="answer"]');
 let submitButton = document.getElementById('submit-btn');
+let scoreCounter = document.getElementById('score');
 
 /**
  * Loops through array of questions and answers
  */
 
-function questionLoop(){
+function questionLoop() {
     console.log('form submitted');
     for (let i = 0; i < questions.length; i++){
-        console.log(questions[i]);
-        currentQuestionNumber = i;
+        currentQuestionNumber = 0;
         displayQuestion();
     }
 }
+
+function nextQuestion () {
+    currentQuestionNumber++;
+    console.log(currentQuestionNumber);
+    questions.forEach(displayQuestion);
+    if (currentQuestionNumber > questions.length) {
+        alert(`Congratulations! You have completed this quiz! You answered ${scoreCounter} questions correctly!`);
+    }
+}
+
 /**
  * Displays quiz questions and answers
  */
@@ -183,18 +194,13 @@ function checkAnswer() {
     console.log('answer has been submitted')
     if (selectedAnswer === questions[currentQuestionNumber].correctAnswer){
         alert('Good job! You got it right!')
-        increaseScore();
+        scoreCounter.innerHTML++;
+        nextButton.addEventListener('click', nextQuestion);
 
     } else {
-        alert(`You answered ${selectedAnswer}. The correct answer was ${questions[currentQuestionNumber].correctAnswer}`)
+        alert(`You answered: ${selectedAnswer}. The correct answer was: ${questions[currentQuestionNumber].correctAnswer}`)
+        nextButton.addEventListener('click', nextQuestion);
     }
 }
 
-/**
- * Increases score
- */
-
-function increaseScore() {
-    document.getElementById('score').innerHTML =+ 1;
-}
 
