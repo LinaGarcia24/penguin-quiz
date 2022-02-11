@@ -7,11 +7,15 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-size: 2em;
+}
+
 input {
     background-color: #404040;
 }
 
-#play, #feedback-btn {
+#play-btn, #feedback-btn {
     background-color:#ffff00;
     font-family: "Mali", sans-serif;
     font-weight: 600;
@@ -22,8 +26,13 @@ input {
     background-color: #ffffff;
     margin: 2em auto;
     width:50%;
-    height: 300px;
+    height: 400px;
     text-align: left;
+    font-size: 1.5em;
+}
+
+.hide {
+    visibility: hidden;
 }
 
 .question-area {
@@ -36,6 +45,11 @@ input {
     font-weight: 600;
     background-color: #404040;
     color: #ffff00;
+    font-size: .8em;
+}
+
+.score-area {
+    font-size: x-large;
 }
 
 .feedback-section textarea {

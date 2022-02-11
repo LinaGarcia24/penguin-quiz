@@ -140,6 +140,9 @@ let scoreCounter = document.getElementById('score');
 
 function questionLoop() {
     console.log('form submitted');
+    document.getElementById('form').classList.add('hide');
+    document.getElementById('game').classList.remove('hide');
+    document.getElementById('score-counter').classList.remove('hide');
     for (let i = 0; i < questions.length; i++){
         currentQuestionNumber = 0;
         displayQuestion();
@@ -147,7 +150,7 @@ function questionLoop() {
 }
 /**
  * Continues iterations for the remainder of the
- * questions array
+ * questions array and ends quiz
  */
 
 function nextQuestion () {
@@ -155,7 +158,10 @@ function nextQuestion () {
     if (currentQuestionNumber < questions.length){
     questions.forEach(displayQuestion);
     } else {
-        alert(`Congratulations! You have completed this quiz! You answered ${scoreCounter.innerHTML} questions out of 12 correctly!`)
+        document.getElementById('game').classList.add('hide');
+        document.getElementById('score-counter').classList.add('hide');
+        document.getElementById('feedback-space').classList.remove('hide');
+        alert(`Congratulations! You have completed this quiz! You answered ${scoreCounter.innerHTML} questions out of 12 correctly!`);
     }
 }
 
@@ -206,5 +212,3 @@ function checkAnswer() {
         nextButton.addEventListener('click', nextQuestion);
     }
 }
-
-

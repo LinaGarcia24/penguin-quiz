@@ -14,7 +14,7 @@
     <h1 class="heading"><i class="fas fa-feather-alt"></i>How Much Do You Know About Penguins?<i class="fas fa-feather-alt"></i></h1>
     <h2>Test your knowledge about some of the world's cutest animals!</h2>
 
-    <section class="form-section">
+    <section id= "form" class="form-section">
         <form action="https://formdump.codeinstitute.net/" method="post">
             <label for="first-name">First Name: </label>
             <input type="text" name="first-name" id="first-name" required>
@@ -28,7 +28,7 @@
         </form>
     </section>
 
-    <div class="game-area">
+    <div id = "game" class="game-area hide">
         <div class="question-area">
             <p id="question">Questions go here</p>
             <div>
@@ -54,10 +54,10 @@
         </div>
         
     </div>
-    <div class="score-area">
+    <div id = "score-counter" class="score-area hide">
         <p>Correct Answers: <span id="score">0</span></p>
     </div>
-    <section class="feedback-section">
+    <section id= "feedback-space" class="feedback-section hide">
         <p>Let us know what you thought about this quiz!</p>
         <textarea name="feedback" id="feeback" cols="30" rows="10"></textarea>
         <button data-type="feedback" id="feedback-btn">Submit Feedback!</button>
