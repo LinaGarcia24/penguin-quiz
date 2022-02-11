@@ -135,7 +135,7 @@ let submitButton = document.getElementById('submit-btn');
 let scoreCounter = document.getElementById('score');
 
 /**
- * Loops through array of questions and answers
+ * Initiates loop through array of questions and answers
  */
 
 function questionLoop() {
@@ -145,13 +145,17 @@ function questionLoop() {
         displayQuestion();
     }
 }
+/**
+ * Continues iterations for the remainder of the
+ * questions array
+ */
 
 function nextQuestion () {
     currentQuestionNumber++;
-    console.log(currentQuestionNumber);
+    if (currentQuestionNumber < questions.length){
     questions.forEach(displayQuestion);
-    if (currentQuestionNumber > questions.length) {
-        alert(`Congratulations! You have completed this quiz! You answered ${scoreCounter} questions correctly!`);
+    } else {
+        alert(`Congratulations! You have completed this quiz! You answered ${scoreCounter.innerHTML} questions out of 12 correctly!`)
     }
 }
 
