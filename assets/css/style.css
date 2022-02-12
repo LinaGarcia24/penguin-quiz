@@ -5,14 +5,21 @@ body {
     font-family: "Mali", sans-serif;
     color:#ffff00;
     text-align: center;
-}
-
-h1 {
-    font-size: 2em;
+    font-size: 1.2em;
 }
 
 input {
     background-color: #404040;
+}
+
+#form {
+    position: absolute;
+    margin: 1em 15em;
+    padding: 10em;
+    flex-flow: column;
+}
+
+#first-name, #last-name {
 }
 
 #play-btn, #feedback-btn {
@@ -26,7 +33,7 @@ input {
     background-color: #ffffff;
     margin: 2em auto;
     width:50%;
-    height: 400px;
+    height: 450px;
     text-align: left;
     font-size: 1.5em;
 }
@@ -36,7 +43,7 @@ input {
 }
 
 .question-area {
-    padding: 2em;
+    padding: 1em;
 }
 
 #submit-btn, #nxt-btn {
@@ -49,7 +56,7 @@ input {
 }
 
 .score-area {
-    font-size: x-large;
+    font-size: 1.2em;
 }
 
 .feedback-section textarea {
