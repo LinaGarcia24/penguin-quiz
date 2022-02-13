@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
 
 body {
     background-color:#000;
     font-family: "Mali", sans-serif;
     color:#ffff00;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.3em;
     overflow-y: hidden;
+}
+
+h1, h2 {
+    margin: 1em;
 }
 
 input {
@@ -16,12 +26,13 @@ input {
 #form {
     position: absolute;
     margin: 1em 15em;
-    padding: 5em;
+    padding: 3em;
 }
 
 #form input {
-    margin: 7em 0 1em 0;
+    margin: 7em 0 0 0;
 }
+
 
 #play-btn, #feedback-btn {
     background-color:#ffff00;
@@ -30,10 +41,15 @@ input {
     font-size: 1.5em;
 }
 
+#play-btn:hover, #feedback-btn:hover {
+    background-color: #404040;
+    color: #ffff00;
+}
+
 .game-area {
     color: #000;
     background-color: #ffffff;
-    margin: 2em 16em;
+    margin: 2em 16.5em;
     width:50%;
     height: 450px;
     text-align: left;
@@ -46,16 +62,26 @@ input {
 }
 
 .question-area {
-    padding: 1em;
+    padding: 2em;
+}
+
+.question-area p {
+    padding-bottom: 1em;
 }
 
 #submit-btn, #nxt-btn {
-    margin: 3em 0;
+    margin: 2em .5em;
     font-family: "Mali", sans-serif;
     font-weight: 600;
     background-color: #404040;
     color: #ffff00;
     font-size: .8em;
+    position: absolute;
+    bottom: 1em;
+}
+
+#nxt-btn {
+    margin-left: 10em;
 }
 
 .score-area {
@@ -75,7 +101,7 @@ input {
 .feedback-section textarea {
     background-color: #404040;
     display: flex;
-    margin: auto;
+    margin: 3em;
 }
 
 .feedback-section textarea:hover {
@@ -83,6 +109,33 @@ input {
 }
 
 #feedback-btn {
-    margin: 1em 0;
     font-size: 1em;
+}
+
+#end-game {
+    margin: 7em;
+    font-size: 2em;
+}
+
+/* responsive design for desktop screens */
+
+@media screen and (max-width: 1600px) {
+    #form {
+        position: absolute;
+        margin: 0 15em;
+        padding: 6em 9em;
+    }
+
+    .game-area {
+        margin: 2em 14em;
+    }
+
+    #submit-btn, #nxt-btn {
+        position: absolute;
+        bottom: .5em;
+    }
+
+    #feedback-space {
+        margin: 0 18em;
+    }
 }

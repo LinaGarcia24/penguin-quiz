@@ -134,10 +134,12 @@ let radioButtons = document.querySelectorAll('input[name="answer"]');
 let submitButton = document.getElementById('submit-btn');
 let scoreCounter = document.getElementById('score');
 
+// Feedback and endgame variables
+let feedbackButton = document.getElementById('feedback-btn');
+
 /**
  * Initiates loop through array of questions and answers
  */
-
 function questionLoop() {
     console.log('form submitted');
     document.getElementById('form').classList.add('hide');
@@ -152,7 +154,6 @@ function questionLoop() {
  * Continues iterations for the remainder of the
  * questions array and ends quiz
  */
-
 function nextQuestion () {
     currentQuestionNumber++;
     if (currentQuestionNumber < questions.length){
@@ -162,6 +163,7 @@ function nextQuestion () {
         document.getElementById('score-counter').classList.add('hide');
         document.getElementById('feedback-space').classList.remove('hide');
         alert(`Congratulations! You have completed this quiz! You answered ${scoreCounter.innerHTML} questions out of 12 correctly!`);
+        feedbackButton.addEventListener('click', endGame);
     }
 }
 
@@ -185,7 +187,6 @@ function displayQuestion() {
 /**
  * Stores answer from radio button
  */
-
 function storeAnswer() {
     for (let radioButton of radioButtons) {
         if (radioButton.checked) {
@@ -199,7 +200,6 @@ function storeAnswer() {
  * Checks if entered answer matches correct answer
  * for current question
  */
-
 function checkAnswer() {
     console.log('answer has been submitted')
     if (selectedAnswer === questions[currentQuestionNumber].correctAnswer){
@@ -211,4 +211,12 @@ function checkAnswer() {
         alert(`You answered: ${selectedAnswer}. The correct answer was: ${questions[currentQuestionNumber].correctAnswer}`)
         nextButton.addEventListener('click', nextQuestion);
     }
+}
+
+/**
+ * Thanks user for playing
+ */
+function endGame() {
+    document.getElementById('feedback-space').classList.add('hide');
+    document.getElementById('end-game').classList.remove('hide');
 }

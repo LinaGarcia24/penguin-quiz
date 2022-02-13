@@ -15,7 +15,7 @@
     <h2>Test your knowledge about some of the world's cutest animals!</h2>
 
     <section id= "form" class="form-section">
-        <form action="" method="post">
+        <form action="" method="">
             <label for="first-name">First Name: </label>
             <input type="text" name="first-name" id="first-name" required>
             <label for="last-name">Last Name: </label>
@@ -27,26 +27,26 @@
             <input type="submit" value="Let's Play!" id="play-btn">
         </form>
     </section>
-
+    
     <div id = "game" class="game-area hide">
         <div class="question-area">
-            <p id="question">Questions go here</p>
+            <p id="question"></p>
             <div>
-                <div>
+                <div id = "answer-area">
                 <input class= "answer" id= "answer1" name="answer" type="radio">
-                <label for="answer1">Answer1</label>
+                <label for="answer1"></label>
                 </div>
                 <div>
                 <input class= "answer" id= "answer2" name="answer" type="radio">
-                <label for="answer2">Answer2</label>
+                <label for="answer2"></label>
                 </div>
                 <div>
                 <input class= "answer" id= "answer3" name="answer" type="radio">
-                <label for="answer3">Answer3</label>
+                <label for="answer3"></label>
                 </div>
                 <div>
                 <input class= "answer" id= "answer4" name="answer" type="radio">
-                <label for="answer4">Answer4</label>
+                <label for="answer4"></label>
                 </div>
             </div>
             <button data-type="submit" id="submit-btn">Submit Answer</button>
@@ -62,6 +62,9 @@
         <textarea name="feedback" id="feeback" cols="70" rows="30"></textarea>
         <button data-type="feedback" id="feedback-btn">Submit Feedback!</button>
     </section>
+    <div>
+        <p id="end-game" class="hide">Thank you for playing!</p>
+    </div>
 
 
     <script src="assets/js/script.js"></script>
