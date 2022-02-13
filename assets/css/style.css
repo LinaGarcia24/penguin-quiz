@@ -6,6 +6,7 @@ body {
     color:#ffff00;
     text-align: center;
     font-size: 1.2em;
+    overflow-y: hidden;
 }
 
 input {
@@ -15,27 +16,29 @@ input {
 #form {
     position: absolute;
     margin: 1em 15em;
-    padding: 10em;
-    flex-flow: column;
+    padding: 5em;
 }
 
-#first-name, #last-name {
+#form input {
+    margin: 7em 0 1em 0;
 }
 
 #play-btn, #feedback-btn {
     background-color:#ffff00;
     font-family: "Mali", sans-serif;
     font-weight: 600;
+    font-size: 1.5em;
 }
 
 .game-area {
     color: #000;
     background-color: #ffffff;
-    margin: 2em auto;
+    margin: 2em 16em;
     width:50%;
     height: 450px;
     text-align: left;
     font-size: 1.5em;
+    position: absolute;
 }
 
 .hide {
@@ -56,7 +59,17 @@ input {
 }
 
 .score-area {
-    font-size: 1.2em;
+    font-size: 1.3em;
+    width:100%;
+    position: absolute;
+    text-align: center;
+    margin-top: 22em;
+}
+
+#feedback-space {
+    font-size: 1.3em;
+    position: absolute;
+    margin: 0 27em;
 }
 
 .feedback-section textarea {
@@ -65,6 +78,11 @@ input {
     margin: auto;
 }
 
+.feedback-section textarea:hover {
+    background-color: #ffffff;
+}
+
 #feedback-btn {
     margin: 1em 0;
+    font-size: 1em;
 }
