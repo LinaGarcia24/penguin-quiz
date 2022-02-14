@@ -16,7 +16,7 @@
 <body>
     <h1 class="heading"><i class="fas fa-feather-alt"></i>How Much Do You Know About Penguins?<i class="fas fa-feather-alt"></i></h1>
     <h2>Test your knowledge about some of the world's cutest animals!</h2>
-
+    <!-- Username Form Section -->
     <section id= "form" class="form-section">
         <form action="https://formdump.codeinstitute.net/" method="post">
             <label for="first-name">First Name: </label>
@@ -30,7 +30,7 @@
             <input type="submit" value="Let's Play!" id="play-btn">
         </form>
     </section>
-    
+    <!-- Quiz Area-->
     <div id = "game" class="game-area hide">
         <div class="question-area">
             <p id="question"></p>
@@ -57,19 +57,20 @@
         </div>
         
     </div>
+    <!-- Score Tracker-->
     <div id = "score-counter" class="score-area hide">
         <p>Correct Answers: <span id="score">0</span></p>
     </div>
+    <!-- Feedback Section-->
     <section id= "feedback-space" class="feedback-section hide">
         <p>Let us know what you thought about this quiz!</p>
         <textarea name="feedback" id="feeback" cols="70" rows="30"></textarea>
         <button data-type="feedback" id="feedback-btn">Submit Feedback!</button>
     </section>
+    <!-- Thank you message -->
     <div>
         <p id="end-game" class="hide">Thank you for playing!</p>
     </div>
-
-
     <script src="assets/js/script.js"></script>
 </body>
 </html>
