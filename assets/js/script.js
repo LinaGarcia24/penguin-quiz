@@ -126,7 +126,7 @@ let questions = [
     },
     correctAnswer: "Both a and b"
     },
-]
+];
 
 // variables for answer submit and check
 let selectedAnswer;
@@ -202,13 +202,13 @@ function storeAnswer() {
  */
 function checkAnswer() {
     if (selectedAnswer === questions[currentQuestionNumber].correctAnswer){
-        alert("Good job! You got it right!")
+        alert("Good job! You got it right!");
         scoreCounter.innerHTML++;
         nextButton.addEventListener("click", nextQuestion);
 
     } else {
         alert(`You answered: ${selectedAnswer}.The correct
-        answer was: ${questions[currentQuestionNumber].correctAnswer}`)
+        answer was: ${questions[currentQuestionNumber].correctAnswer}`);
         nextButton.addEventListener("click", nextQuestion);
     }
 }

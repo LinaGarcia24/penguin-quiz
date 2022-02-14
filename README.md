@@ -2,7 +2,7 @@
 
 The penguin quiz website is a fun page where penguin lovers can go to test their knowledge of penguin facts. The website offers entertainment to the user for a few minutes as they answer each question to the best of their knowledge.
 
-The user of this website will be able to fill out a form with their information and create a username, select an answer and select when to submit it, recieve a notice on whether the response was right or wrong and what the correct answer was, see their current correct question score, see their final score, be able to offer feedback, and will recieve a thank you message once they have completed the feedback form.
+The user of this website will be able to fill out a form with their information and create a username, select an answer and select when to submit it, receive a notice on whether the response was right or wrong and what the correct answer was, see their current correct question score, see their final score, be able to offer feedback, and will receive a thank you message once they have completed the feedback form.
 
 <img src="./assets/images/amiresponsive_peng.PNG">
 
@@ -36,7 +36,7 @@ The user of this website will be able to fill out a form with their information 
     <h3>Feedback and Thank You for Playing Section</h3>
     <ul>
     <li>Once the alert informing the user of their finale score is cleared, the game area disappears and a feedback section appears asking the user to submit feedback for what they thought about the quiz.</li>
-    <li>Once the user fills out the feedback textarea, they can submit the information with the Submit Feedback button that changes color on hover and recieve a final thank you for playing message on the screen. This terminates the quiz completely letting the user know that they are completely done with the quiz.</li>
+    <li>Once the user fills out the feedback textarea, they can submit the information with the Submit Feedback button that changes color on hover and receive a final thank you for playing message on the screen. This terminates the quiz completely letting the user know that they are completely done with the quiz.</li>
     </ul>
     <img src="./assets/images/feedbackpage.PNG">
     <img src="./assets/images/thankyoupage.PNG">
@@ -60,7 +60,7 @@ The user of this website will be able to fill out a form with their information 
 <ul>
 <li>HTML
     <ul>
-    <li>Two errors and two warnings returned when passing through the offical W3C validator. The two errors where about the lack of values for the method and action attributes for the form element in the username form section. I added the form dump link from Code Institute and added a method of "post" and that resolved that problem. The two warnings recieved were for the lack of headers for the username form section and the feedback section. I left the warnings in place as the layout of the page does not need a header for either section in order for the user to understand what each section is.</li>
+    <li>Two errors and two warnings returned when passing through the offical W3C validator. The two errors where about the lack of values for the method and action attributes for the form element in the username form section. I added the form dump link from Code Institute and added a method of "post" and that resolved that problem. The two warnings received were for the lack of headers for the username form section and the feedback section. I left the warnings in place as the layout of the page does not need a header for either section in order for the user to understand what each section is.</li>
     </ul>
 </li>
 <li>CSS
@@ -70,7 +70,7 @@ The user of this website will be able to fill out a form with their information 
 </li>
 <li>JavaScript
 <ul>
-    <li>Several warnings were returned when passing through the JSlint validator. The main issues were usage of single quotes when the language prefers double quotes. Some of the warnings dictated that the length of the individual line was longer than 80 characters. Other warnings were about the way that the keys were ordered in the questions array. The preferred method would have had the answers listed first according to the validator. The last warning was about an unnecessary 'let' in a function. I fixed almost every issue except for the array order and the 'let' warning as both would completely affect the code and the functionality of the website.</li>
+    <li>Several warnings were returned after passing through the JSHint validator. The warnings were recommending using 'esversion6' as let and for of statements are only available on ES6.</li>
 </ul>
 </li>
 <li>Accessibility
