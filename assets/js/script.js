@@ -141,7 +141,6 @@ let feedbackButton = document.getElementById("feedback-btn");
  * Initiates loop through array of questions and answers
  */
 function questionLoop() {
-    console.log("form submitted");
     document.getElementById("form").classList.add("hide");
     document.getElementById("game").classList.remove("hide");
     document.getElementById("score-counter").classList.remove("hide");
@@ -200,7 +199,6 @@ function storeAnswer() {
  * for current question
  */
 function checkAnswer() {
-    console.log("answer has been submitted");
     if (selectedAnswer === questions[currentQuestionNumber].correctAnswer){
         alert("Good job! You got it right!")
         scoreCounter.innerHTML++;
