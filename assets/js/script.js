@@ -182,9 +182,11 @@ function displayQuestion() {
     answerFourLabel.innerText = answerFour.value;
     submitButton.addEventListener("click", storeAnswer);
 }
+
 /**
  * Stores answer from radio button
  */
+// Code from https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
 function storeAnswer() {
     for (let radioButton of radioButtons) {
         if (radioButton.checked) {

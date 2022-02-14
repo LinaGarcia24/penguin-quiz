@@ -13,7 +13,7 @@ The user of this website will be able to fill out a form with their information 
     <li>
     <h3>Title and Username Form</h3>
     <ul>
-    <li>Found in the middle of the page is the title of the quiz.</li>
+    <li>Found in the middle of the page is the title of the quiz. Yellow text with a black background and gray input boxes were selected to go with the penguin theme.</li>
     <li>Under the title of the quiz, the user will find a short heading explaining the quiz and the purpose of page.</li>
     <li>Then, under the smaller heading and in the middle of the page, the user will find a form that asks for their information and allows them to create their own username.</li>
     <li>Last on this page is the Let's Play! button that changes color on hover and allows the user to begin the quiz after they have completed the username form giving them control over when they want to initiate the quiz.</li>
@@ -22,7 +22,7 @@ The user of this website will be able to fill out a form with their information 
     <li>
     <h3>Quiz Area</h3>
     <ul>
-    <li>Once the Let's Play! button is clicked, the title and the smaller heading stay in place but the form disappears from the page allowing the quiz area to appear.</li>
+    <li>Once the Let's Play! button is clicked, the title and the smaller heading stay in place but the form disappears from the page allowing the quiz area to appear. Quiz area is all white to resemble the belly of a penguin.</li>
     <li>The first question is already populated in the box along with the answers in radio button form so the user can only select one possible answer from the multiple choices available.</li>
     <li>Once the user selects an answer, they can find the Submit Answer button below to check if their answer is correct. This gives the user control of when they want to submit the answer in case they change their mind on what the correct answer is.</li>
     <li>After the answer has been submitted, an alert box will pop up informing the user if they got the answer correct or if they got it wrong and what the correct answer is.</li>
@@ -65,8 +65,46 @@ The user of this website will be able to fill out a form with their information 
 </li>
 <li>CSS
 <ul>
-<li>No errors were found when passing through the official (Jigsaw) validator.</li>
+    <li>No errors were found when passing through the official (Jigsaw) validator.</li>
+</ul>
+</li>
+<li>JavaScript
+<ul>
+    <li>Several warnings were returned when passing through the JSlint validator. The main issues were usage of single quotes when the language prefers double quotes. Some of the warnings dictated that the length of the individual line was longer than 80 characters. Other warnings were about the way that the keys were ordered in the questions array. The preferred method would have had the answers listed first according to the validator. The last warning was about an unnecessary 'let' in a function. I fixed almost every issue except for the array order and the 'let' warning as both would completely affect the code and the functionality of the website.</li>
+</ul>
+</li>
+<li>Accessibility
+<ul>
+    <li>I confirmed that the colors and fonts chosen are easy to read and accessible by running it through Lighthouse in DevTools.</li>
+    <img src="./assets/images/lighthousereport.PNG">
+</ul>
+</li>
 </ul>
 
+<h2>Deployment</h2>
+<hr>
+<ul>
+<li>The site was deployed using GitHub pages. The steps were as follows:
+    <li>In the GitHub <a href= "https://github.com/LinaGarcia24/penguin-quiz">repository</a> navigate to the settings tab.</li>
+    <li>On the menu on the left hand side, under "Code and automation" click on the last tab that reads "Pages".</li>
+    <li>Once in pages, in the dropdown menu in the "Source" section select the "main" branch and click save.</li>
+    <li>Once the main branch has been selected and saved, the link to the deployed website is provided.</li>
 </li>
+</ul>
+<p>The live site can be found here: <a href="https://linagarcia24.github.io/penguin-quiz/">Penguin Quiz</a></p>
+
+<h2>Credits</h2>
+<hr>
+
+<h3>Content</h3>
+<ul>
+    <li>Guiding code for DOMContentLoaded eventlistener and score counter was derived from the <a href="https://github.com/LinaGarcia24/love-maths">Love Maths</a> project.</li>
+    <li>Code for storing selected answer from radio buttons was derived from <a href="https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/">javascripttutorial.net</a>.</li>
+    <li>Code for how to structure questions and answers array was derived from <a href="https://www.sitepoint.com/simple-javascript-quiz/">sitepoint.com</a>.</li>
+    <li>Information on forEach loop and how to use it as well as how to use the classList add and remove came from this YouTube tutorial by <a href= "https://www.youtube.com/watch?v=riDzcEQbX6k&t=1177s">Web Dev Simplified</a>.</li>
+</ul>
+
+<h3>Media</h3>
+<ul>
+    <li>Favicon came from <a href="https://favicon.io/emoji-favicons/penguin/">favicon.io</a>.</li>
 </ul>
