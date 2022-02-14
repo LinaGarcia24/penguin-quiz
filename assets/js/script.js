@@ -1,22 +1,22 @@
 // Ensures DOM is loaded before quiz starts
 document.addEventListener("DOMContentLoaded", function () {
     // Quiz begins after form is completed
-    let playButton = document.getElementById('play-btn');
-    playButton.addEventListener('click', questionLoop);
+    let playButton = document.getElementById("play-btn");
+    playButton.addEventListener("click", questionLoop);
 });
 
 // variables for questions loop
 let currentQuestionNumber;
-let newQuestion = document.getElementById('question');
-let answerOne = document.getElementById('answer1');
-let answerOneLabel = document.getElementsByTagName('label')[4];
-let answerTwo = document.getElementById('answer2');
-let answerTwoLabel = document.getElementsByTagName('label')[5];
-let answerThree = document.getElementById('answer3');
-let answerThreeLabel = document.getElementsByTagName('label')[6];
-let answerFour = document.getElementById('answer4');
-let answerFourLabel = document.getElementsByTagName('label')[7];
-let nextButton = document.getElementById('nxt-btn');
+let newQuestion = document.getElementById("question");
+let answerOne = document.getElementById("answer1");
+let answerOneLabel = document.getElementsByTagName("label")[4];
+let answerTwo = document.getElementById("answer2");
+let answerTwoLabel = document.getElementsByTagName("label")[5];
+let answerThree = document.getElementById("answer3");
+let answerThreeLabel = document.getElementsByTagName("label")[6];
+let answerFour = document.getElementById("answer4");
+let answerFourLabel = document.getElementsByTagName("label")[7];
+let nextButton = document.getElementById("nxt-btn");
 let questions = [
     { question: "What is the scientific name for penguins?",
     answers: {
@@ -130,21 +130,21 @@ let questions = [
 
 // variables for answer submit and check
 let selectedAnswer;
-let radioButtons = document.querySelectorAll('input[name="answer"]');
-let submitButton = document.getElementById('submit-btn');
-let scoreCounter = document.getElementById('score');
+let radioButtons = document.querySelectorAll("input[name='answer']");
+let submitButton = document.getElementById("submit-btn");
+let scoreCounter = document.getElementById("score");
 
 // Feedback and endgame variables
-let feedbackButton = document.getElementById('feedback-btn');
+let feedbackButton = document.getElementById("feedback-btn");
 
 /**
  * Initiates loop through array of questions and answers
  */
 function questionLoop() {
-    console.log('form submitted');
-    document.getElementById('form').classList.add('hide');
-    document.getElementById('game').classList.remove('hide');
-    document.getElementById('score-counter').classList.remove('hide');
+    console.log("form submitted");
+    document.getElementById("form").classList.add("hide");
+    document.getElementById("game").classList.remove("hide");
+    document.getElementById("score-counter").classList.remove("hide");
     for (let i = 0; i < questions.length; i++){
         currentQuestionNumber = 0;
         displayQuestion();
@@ -159,11 +159,12 @@ function nextQuestion () {
     if (currentQuestionNumber < questions.length){
     questions.forEach(displayQuestion);
     } else {
-        document.getElementById('game').classList.add('hide');
-        document.getElementById('score-counter').classList.add('hide');
-        document.getElementById('feedback-space').classList.remove('hide');
-        alert(`Congratulations! You have completed this quiz! You answered ${scoreCounter.innerHTML} questions out of 12 correctly!`);
-        feedbackButton.addEventListener('click', endGame);
+        document.getElementById("game").classList.add("hide");
+        document.getElementById("score-counter").classList.add("hide");
+        document.getElementById("feedback-space").classList.remove("hide");
+        alert(`Congratulations! You have completed this quiz!
+        You answered ${scoreCounter.innerHTML} questions out of 12 correctly!`);
+        feedbackButton.addEventListener("click", endGame);
     }
 }
 
@@ -180,10 +181,8 @@ function displayQuestion() {
     answerThreeLabel.innerText = answerThree.value;
     answerFour.value = questions[currentQuestionNumber].answers.d;
     answerFourLabel.innerText = answerFour.value;
-    submitButton.addEventListener('click', storeAnswer);
-    } 
-     
-
+    submitButton.addEventListener("click", storeAnswer);
+}
 /**
  * Stores answer from radio button
  */
@@ -201,15 +200,16 @@ function storeAnswer() {
  * for current question
  */
 function checkAnswer() {
-    console.log('answer has been submitted')
+    console.log("answer has been submitted");
     if (selectedAnswer === questions[currentQuestionNumber].correctAnswer){
-        alert('Good job! You got it right!')
+        alert("Good job! You got it right!")
         scoreCounter.innerHTML++;
-        nextButton.addEventListener('click', nextQuestion);
+        nextButton.addEventListener("click", nextQuestion);
 
     } else {
-        alert(`You answered: ${selectedAnswer}. The correct answer was: ${questions[currentQuestionNumber].correctAnswer}`)
-        nextButton.addEventListener('click', nextQuestion);
+        alert(`You answered: ${selectedAnswer}.The correct
+        answer was: ${questions[currentQuestionNumber].correctAnswer}`)
+        nextButton.addEventListener("click", nextQuestion);
     }
 }
 
@@ -217,6 +217,6 @@ function checkAnswer() {
  * Thanks user for playing
  */
 function endGame() {
-    document.getElementById('feedback-space').classList.add('hide');
-    document.getElementById('end-game').classList.remove('hide');
+    document.getElementById("feedback-space").classList.add("hide");
+    document.getElementById("end-game").classList.remove("hide");
 }
