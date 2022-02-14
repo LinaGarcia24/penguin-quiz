@@ -20,7 +20,7 @@ h1, h2 {
 }
 
 input {
-    background-color: #404040;
+    background-color: #837c7c;
 }
 
 #form {
@@ -99,7 +99,7 @@ input {
 }
 
 .feedback-section textarea {
-    background-color: #404040;
+    background-color: #837c7c;
     display: flex;
     margin: 3em;
 }
@@ -141,6 +141,11 @@ input {
 
 /* responsive design for laptop screens 1280px and below */
 @media screen and (max-width: 1280px) {
+    #form {
+        padding: 3em 9em;
+    }
+
+
     #form input {
         margin: 0 0 2em 0;
         width: 250px;
@@ -163,17 +168,21 @@ input {
 /* responsive design for screens 768px and below */
 @media screen and (max-width: 768px) {
     body {
-        font-size: medium;
+        font-size: large;
     }
 
     #form {
-        margin: 0 7em;
+        margin: 0 5em;
+        padding: 3em 9em;
     }
 
     .game-area {
-        height: 350px;
-        height: 350px;
-        margin: 1em 11em;
+        height: 385px;
+        margin: 1em 9em;
+    }
+
+    .score-area {
+        margin-top: 21em;
     }
 
     #feedback-space {
@@ -183,6 +192,39 @@ input {
     .feedback-section textarea {
         height: 300px;
     }
+}
+
+/* responsive design for screens 400px and below */
+@media screen and (max-width:400px) {
+    #form {
+        margin: unset;
+        padding: 3em;
+    }
+
+    .game-area {
+        height: 385px;
+        margin: 1em 0;
+        width: 100%;
+    }
+
+    .score-area {
+        margin-top: 19em;
+    }
+
+    #feedback-space {
+        margin: 1em 0;
+    }
+
+    .feedback-section textarea {
+        height: 300px;
+        width: 100%;
+        margin: 2em 0;
+    }
+
+    #end-game {
+        margin: 2em;
+    }
+    
 }
 
 /* responsive design for screens 320px and below */
