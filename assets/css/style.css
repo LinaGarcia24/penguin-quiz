@@ -18,20 +18,23 @@ h1, h2 {
     margin: 1em;
 }
 
-input {
-    background-color: #837c7c;
-}
-
 #form {
     position: absolute;
     margin: 1em 15em;
     padding: 3em;
 }
 
+h3 {
+    display: none;
+}
+
 #form input {
     margin: 7em 0 0 0;
 }
 
+input {
+    background-color: #837c7c;
+}
 
 #play-btn, #feedback-btn {
     background-color:#ffff00;
