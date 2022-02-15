@@ -133,6 +133,8 @@ let selectedAnswer;
 let radioButtons = document.querySelectorAll("input[name='answer']");
 let submitButton = document.getElementById("submit-btn");
 let scoreCounter = document.getElementById("score");
+let answerAlert = document.getElementById("answer-alert");
+let closeButton = document.getElementById("close");
 
 // Feedback and endgame variables
 let feedbackButton = document.getElementById("feedback-btn");
@@ -149,6 +151,7 @@ function questionLoop() {
         displayQuestion();
     }
 }
+
 /**
  * Continues iterations for the remainder of the
  * questions array and ends quiz
@@ -158,12 +161,10 @@ function nextQuestion () {
     if (currentQuestionNumber < questions.length){
     questions.forEach(displayQuestion);
     } else {
-        document.getElementById("game").classList.add("hide");
-        document.getElementById("score-counter").classList.add("hide");
-        document.getElementById("feedback-space").classList.remove("hide");
-        alert(`Congratulations! You have completed this quiz!
-        You answered ${scoreCounter.innerHTML} questions out of 12 correctly!`);
-        feedbackButton.addEventListener("click", endGame);
+        document.getElementById("modal").classList.remove("hide");
+        answerAlert.innerHTML= `Congratulations! You have completed this quiz!
+        You answered ${scoreCounter.innerHTML} question(s) out of 12 correctly!`;
+        closeButton.addEventListener("click", endGame);
     }
 }
 
@@ -202,21 +203,44 @@ function storeAnswer() {
  */
 function checkAnswer() {
     if (selectedAnswer === questions[currentQuestionNumber].correctAnswer){
-        alert("Good job! You got it right!");
+        document.getElementById("modal").classList.remove("hide");
+        answerAlert.innerHTML = "Good job! You got it right!";
         scoreCounter.innerHTML++;
+        closeButton.addEventListener("click", closeModal);
         nextButton.addEventListener("click", nextQuestion);
 
     } else {
-        alert(`You answered: ${selectedAnswer}.The correct
-        answer was: ${questions[currentQuestionNumber].correctAnswer}`);
+        document.getElementById("modal").classList.remove("hide");
+        answerAlert.innerHTML = `You answered: ${selectedAnswer}. The correct
+        answer was: ${questions[currentQuestionNumber].correctAnswer}.`;
+        closeButton.addEventListener("click", closeModal);
         nextButton.addEventListener("click", nextQuestion);
     }
 }
 
 /**
- * Thanks user for playing
+ * Closes modal box
+ */
+
+function closeModal() {
+    document.getElementById("modal").classList.add("hide");
+}
+
+
+/**
+ * Ends quiz and displays feedback textarea
  */
 function endGame() {
+    document.getElementById("game").classList.add("hide");
+    document.getElementById("score-counter").classList.add("hide");
+    document.getElementById("feedback-space").classList.remove("hide");
+    feedbackButton.addEventListener("click", thankYou);
+}
+
+/**
+ * Thanks user for playing game
+ */
+function thankYou () {
     document.getElementById("feedback-space").classList.add("hide");
     document.getElementById("end-game").classList.remove("hide");
 }

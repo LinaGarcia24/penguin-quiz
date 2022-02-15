@@ -51,11 +51,40 @@ input {
     color: #000;
     background-color: #ffffff;
     margin: 2em 15.5em;
-    width:50%;
+    width: 50%;
     height: 450px;
     text-align: left;
     font-size: 1.5em;
     position: absolute;
+}
+
+.modal-container {
+    position: fixed;
+    top: 13em;
+    left: 23em;
+    z-index: 1;
+    background-color: #837c7c;
+    color: #000;
+    width: 25%;
+    height: min-content;
+    border: 2px solid #000;
+}
+
+.modal-content {
+    padding: 1px 5px;
+}
+
+.close-btn {
+    float: right;
+    font-weight: 600;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color:#ffff00;
+    background-color: #000;
+    cursor: pointer;
 }
 
 .hide {
@@ -71,7 +100,7 @@ input {
 }
 
 #submit-btn, #nxt-btn {
-    margin: 1.5em .5em;
+    margin: .5em .5em;
     font-family: "Mali", sans-serif;
     font-weight: 600;
     background-color: #404040;
