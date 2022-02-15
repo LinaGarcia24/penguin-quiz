@@ -163,7 +163,7 @@ function nextQuestion () {
     } else {
         document.getElementById("modal").classList.remove("hide");
         answerAlert.innerHTML= `Congratulations! You have completed this quiz!
-        You answered ${scoreCounter.innerHTML} question(s) out of 12 correctly!`;
+        You answered ${scoreCounter.innerHTML} question(s) out of ${questions.length} correctly!`;
         closeButton.addEventListener("click", endGame);
     }
 }
@@ -221,7 +221,6 @@ function checkAnswer() {
 /**
  * Closes modal box
  */
-
 function closeModal() {
     document.getElementById("modal").classList.add("hide");
 }
