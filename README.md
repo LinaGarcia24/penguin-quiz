@@ -18,7 +18,7 @@ The user of this website will be able to fill out a form with their information 
     <li>Then, under the smaller heading and in the middle of the page, the user will find a form that asks for their information and allows them to create their own username.</li>
     <li>Last on this page is the Let's Play! button that changes color on hover and allows the user to begin the quiz after they have completed the username form giving them control over when they want to initiate the quiz.</li>
     </ul>
-    <img src="./assets/images/usernameform.PNG">
+    <img src="./assets/images/titleandformpage.PNG">
     <li>
     <h3>Quiz Area</h3>
     <ul>
